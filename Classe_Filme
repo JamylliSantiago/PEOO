@@ -1,0 +1,33 @@
+class Filme:
+    def __init__(self, titulo, duracao_em_minutos):
+        self._titulo = titulo
+        self._duracao_em_minutos = duracao_em_minutos
+
+    def getTitulo(self):
+        return self._titulo
+
+    def setTitulo(self, titulo):
+        self._titulo = titulo
+
+    def getDuracaoEmMinutos(self):
+        return self._duracao_em_minutos
+
+    def setDuracaoEmMinutos(self, duracao_em_minutos):
+        self._duracao_em_minutos = duracao_em_minutos
+
+    def exibirDuracaoEmHoras(self):
+        horas = self._duracao_em_minutos // 60
+        minutos = self._duracao_em_minutos % 60
+        print(f"O filme {self._titulo} possui {horas} horas e {minutos} minutos de duração.")
+
+class TestarFilme:
+    def main(self):
+        titulo = input("Digite o título do filme: ")
+        duracao_em_minutos = int(input("Digite a duração do filme em minutos: "))
+        filme = Filme(titulo, duracao_em_minutos)
+
+        filme.exibirDuracaoEmHoras()
+
+if __name__ == "__main__":
+    testar = TestarFilme()
+    testar.main()
