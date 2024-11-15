@@ -1,3 +1,5 @@
+# Jamylli Santiago e Julia Nascimento 
+
 class Filme:
     def __init__(self, titulo, duracao_em_minutos):
         self._titulo = titulo
