@@ -23,13 +23,12 @@ class Filme:
         print(f"O filme {self._titulo} possui {horas} horas e {minutos} minutos de duração.")
 
 class TestarFilme:
-    def main(self):
+    def __init__(self):
         titulo = input("Digite o título do filme: ")
         duracao_em_minutos = int(input("Digite a duração do filme em minutos: "))
         filme = Filme(titulo, duracao_em_minutos)
 
         filme.exibirDuracaoEmHoras()
 
-if __name__ == "__main__":
-    testar = TestarFilme()
-    testar.main()
+
+testar = TestarFilme()
